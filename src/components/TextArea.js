@@ -18,6 +18,7 @@ settext(vartext)
         let vartext = text.toLowerCase();
         
         settext(vartext)
+        props.showAlert("Converted to lowercase","success")
             }
 
 
@@ -53,7 +54,7 @@ settext(vartext)
   <textarea className="form-control" value={text}   onChange={handleonChange} style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'black'}} rows="3"></textarea>
 </div>    
        <button className="btn btn-primary mx-3" onClick={handleClick}>convert to uppercase</button>
-       <button className="btn btn-primary mx-3" onClick={handlelowClick}>convert to uppercase</button>
+       <button className="btn btn-primary mx-3" onClick={handlelowClick}>convert to lowercase</button>
        <button className="btn btn-primary mx-3" onClick={clearText}>Clear Button</button>
 
        </div>
