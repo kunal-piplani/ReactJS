@@ -5,12 +5,12 @@ import TextArea from './components/TextArea';
 import About from './components/About';
 import React ,{useState} from 'react';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 function App() {
   const [alert, setAlert] = useState(null);
 const showAlert=(message,type)=>{
@@ -56,27 +56,27 @@ else{
 
   return (
   <>
- <Router>
+ {/* <Router> */}
  <NavBar title="AITA" mode={mode} toggleMode ={toggleMode} text={text} />
  <Alert alert={alert}></Alert>
  <div className="container my-3">
- <Switch>
-          <Route exact path="/about">
-            <About />
-          </Route>
+ {/* <Switch> */}
+          {/* <Route path="/about"> */}
+            {/* <About /> */}
+          {/* </Route> */}
         
          
-          <Route exact path="/">
+          {/* <Route path="/"> */}
           <TextArea showAlert={showAlert} heading="Word Count Uility" mode={mode}/>
-          </Route>
-        </Switch>
+          {/* </Route>
+        </Switch> */}
  
 
  </div>
 
- </Router>
-  </>
+ {/* </Router> */}
+ </>
   );
-  }
+}
 
 export default App;
