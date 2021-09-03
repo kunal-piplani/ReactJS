@@ -25,8 +25,22 @@ setTimeout(() => {
 
 }
 
+const removeBodyClasses=()=>{
 
-  const toggleMode= ()=>{
+  document.body.classList.remove('bg-light');
+  document.body.classList.remove('bg-dark');
+  document.body.classList.remove('bg-warning');
+  document.body.classList.remove('bg-danger');
+  document.body.classList.remove('bg-success');
+
+
+}
+  const toggleMode= (cls)=>{
+    console.log(cls);
+    removeBodyClasses();
+document.body.classList.add('bg-'+cls)
+
+
 if(mode==='light'){
 setMode('dark');
 setText('Switch to Light Mode')
