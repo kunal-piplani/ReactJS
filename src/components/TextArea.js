@@ -27,14 +27,14 @@ settext(vartext)
 
             const handCopyClick=()=>{
 
-                console.log("copying ");
-                var text =document.getElementById("box");
-                text.select();
+                // console.log("copying ");
+                // var text =document.getElementById("box");
+                // text.select();
  
                 
-                navigator.clipboard.writeText(text.value)
+                navigator.clipboard.writeText(text)   
                 // settext(text)
-                document.getSelection().removeAllRanges();
+                // document.getSelection().removeAllRanges();
                 props.showAlert("Text Copied","success")
                     }
         
@@ -85,7 +85,7 @@ settext(vartext)
 </p>
 
 <p>
-words  count is {text.split(" ").filter((element)=>{return element.length!==0}).length}
+words  count is {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}
 </p>
 
 </div>
